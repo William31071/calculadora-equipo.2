@@ -44,4 +44,7 @@ def dividir(a, b):
 
 # Responsable: William de Jesús Carmona Chi
 def mostrar_resultado(operacion, a, b, resultado):
-    raise NotImplementedError
+    if resultado is None:
+        print("No se pudo calcular la operacion.")
+        return
+    print(f"{a:g} {operacion} {b:g} = {resultado:g}")
