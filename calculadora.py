@@ -21,7 +21,7 @@ def obtener_numeros():
 
 # Responsable: Hugo Peralta Galván
 def sumar(a, b):
-    raise NotImplementedError
+    return a + b
 
 
 # Responsable: Hugo Peralta Galván
