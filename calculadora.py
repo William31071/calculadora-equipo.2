@@ -31,23 +31,17 @@ def restar(a, b):
 
 # Responsable: Diego Uriel Valerio Mora
 def multiplicar(a, b):
-    raise NotImplementedError
+    return a * b
 
 
 # Responsable: Diego Uriel Valerio Mora
 def dividir(a, b):
-    raise NotImplementedError
+    if b == 0:
+        print("Error: no se puede dividir entre cero.")
+        return None
+    return a / b
 
 
 # Responsable: William de Jesús Carmona Chi
 def mostrar_resultado(operacion, a, b, resultado):
     raise NotImplementedError
-
-
-# Responsable: por definir
-def main():
-    raise NotImplementedError
-
-
-if __name__ == "__main__":
-    main()
