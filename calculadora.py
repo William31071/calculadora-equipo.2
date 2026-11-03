@@ -44,4 +44,38 @@ def dividir(a, b):
 
 # Responsable: William de Jesús Carmona Chi
 def mostrar_resultado(operacion, a, b, resultado):
-    raise NotImplementedError
+    if resultado is None:
+        print("No se pudo calcular la operacion.")
+        return
+    print(f"{a:g} {operacion} {b:g} = {resultado:g}")
+
+
+# Responsable: William de Jesús Carmona Chi
+def main():
+    operaciones = {
+        "1": ("+", sumar),
+        "2": ("-", restar),
+        "3": ("*", multiplicar),
+        "4": ("/", dividir),
+    }
+    while True:
+        print("\n=== Calculadora ===")
+        print("1. Sumar")
+        print("2. Restar")
+        print("3. Multiplicar")
+        print("4. Dividir")
+        print("5. Salir")
+        opcion = input("Elige una opcion: ").strip()
+        if opcion == "5":
+            print("Hasta luego.")
+            break
+        if opcion not in operaciones:
+            print("Opcion no valida.")
+            continue
+        simbolo, funcion = operaciones[opcion]
+        a, b = obtener_numeros()
+        mostrar_resultado(simbolo, a, b, funcion(a, b))
+
+
+if __name__ == "__main__":
+    main()
