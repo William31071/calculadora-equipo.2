@@ -26,7 +26,7 @@ def sumar(a, b):
 
 # Responsable: Hugo Peralta Galván
 def restar(a, b):
-    raise NotImplementedError
+    return a - b
 
 
 # Responsable: Diego Uriel Valerio Mora
